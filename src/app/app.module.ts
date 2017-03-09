@@ -7,8 +7,10 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DestinationsComponent } from './destinations/destinations.component';
+import { TripsComponent } from './trips/trips.component';
 
 import { DestinationsService } from './destinations.service';
+import { TripsService } from './trips.service';
 
 const ROUTES = [
   {
@@ -19,6 +21,9 @@ const ROUTES = [
   {
     path: 'destinations',
     component: DestinationsComponent
+  }, {
+    path: 'trips',
+    component: TripsComponent
   }
 ];
 
@@ -26,6 +31,7 @@ const ROUTES = [
   declarations: [
     AppComponent,
     DestinationsComponent,
+    TripsComponent,
 
   ],
   imports: [
@@ -34,7 +40,7 @@ const ROUTES = [
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [DestinationsService],
+  providers: [DestinationsService, TripsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

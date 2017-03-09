@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="row" *ngFor="let destination of destinations">
-    <div class="card card-block">
-      <h4 class="card-title">{{ destination.location }}</h4>
-      <p class="card-text">{{ destination.type | uppercase }}</p>
+  <div class="destination-item" *ngFor="let d of destinations">
+    <div class="destination">
+      <div class="destination-img"></div>
+      <p class="destination-location">{{d.location}}</p>
     </div>
   </div>
 </div>
+

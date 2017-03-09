@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 import { DestinationsService } from '../destinations.service';
+import { Destination } from '../destination';
 
 @Component({
   selector: 'app-destinations',
@@ -9,12 +10,23 @@ import { DestinationsService } from '../destinations.service';
 export class DestinationsComponent implements OnInit {
 
   constructor(private destinationService: DestinationsService) { }
-  destinations: any = [];
-  
+  destinations: Destination[] = [];
+  @Input()
+  destination: Destination = new Destination();
+
+  types = ['local', 'international'];
   ngOnInit() {
     this.destinationService.getAllDestinations().subscribe( destinations => {
       this.destinations = destinations;
-    })
+    });
   }
+
+  createDestination() {
+    this.destinationService.createDestination(this.destination);
+  }
+
+
+
+
 
 }
