@@ -1,8 +1,6 @@
-<p>
-  trips works!
-</p>
+
 <ul>
-  <li *ngFor="let t of trips">
+  <li *ngFor="let t of trips" (click)="onSelectTrip(t)">
     <span>{{t.location}}</span>
     <span>{{t.amount | currency: "Php": 2}}</span>
   </li>

@@ -11,6 +11,7 @@ import { TripsComponent } from './trips/trips.component';
 
 import { DestinationsService } from './destinations.service';
 import { TripsService } from './trips.service';
+import { TripDetailComponent } from './trip-detail/trip-detail.component';
 
 const ROUTES = [
   {
@@ -24,6 +25,10 @@ const ROUTES = [
   }, {
     path: 'trips',
     component: TripsComponent
+  },
+  {
+    path: 'trip/:id',
+    component: TripDetailComponent
   }
 ];
 
@@ -32,6 +37,7 @@ const ROUTES = [
     AppComponent,
     DestinationsComponent,
     TripsComponent,
+    TripDetailComponent,
 
   ],
   imports: [

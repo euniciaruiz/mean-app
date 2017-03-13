@@ -26,4 +26,25 @@ router.get('/trips', (req, res) => {
         });
 });
 
+router.get('/trip/:id', (req, res) => {
+        var id = req.params.id;
+        axios.get(`${API}/getTrip.php?id=`+id).then(trip => {
+                res.status(200).json(trip.data);
+        })
+        .catch(error => {
+                res.status(500).send(error);
+        });
+});
+
+router.get('/destinations/:loc', (req, res) => {
+        var loc = req.params.loc;
+        axios.get(`${API}/getDestination.php?loc=`+loc).then(destination => {
+                res.status(200).json(destination.data);
+        })
+        .catch(error => {
+                res.status(500).send(error);
+        });
+});
+
+
 module.exports = router;

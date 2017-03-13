@@ -19,4 +19,8 @@ export class DestinationsService {
     .map(res => res.json())
     .subscribe( data => console.log(data));
   }
+
+  getDestination(loc: string) {
+    return this.http.get('/api/destinations/'+loc).map(res => res.json()); 
+  }
 }

@@ -1,0 +1,7 @@
+<input id="amount" name ="amount" type="number" value="{{trip.amount}}" [(ngModel)]="trip.amount">
+{{trip.amount}}
+<select [(ngModel)]="details.location" id="location" name="location">
+  <option *ngFor="let d of allDestinations" [value]="d.location" [selected]="">{{d.location}}</option>
+</select>
+<div class="update-btn" (click)="updateTrip(trip, details)">Update</div>
+<div class="back-btn" (click)="goBack()">Go back</div>
