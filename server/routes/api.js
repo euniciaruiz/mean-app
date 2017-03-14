@@ -36,8 +36,8 @@ router.get('/trip/:id', (req, res) => {
         });
 });
 
-router.get('/destinations/:loc', (req, res) => {
-        var loc = req.params.loc;
+router.get('/destinations/:id', (req, res) => {
+        var loc = req.params.id;
         axios.get(`${API}/getDestination.php?loc=`+loc).then(destination => {
                 res.status(200).json(destination.data);
         })

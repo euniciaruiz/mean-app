@@ -1,0 +1,8 @@
+<div class="container">
+  <input type="text" value="{{destination.location}}" [(ngModel)]="destination.location">
+  <select [(ngModel)]="destination.type">
+    <option *ngFor="let t of types" [value]="t">{{t}}</option>
+  </select>
+  <div class="update-btn" (click)="updateDestination()">Update</div>
+  <div class="back-btn" (click)="goBack()">Go Back</div>
+</div>

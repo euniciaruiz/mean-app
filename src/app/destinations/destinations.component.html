@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="destination-item" *ngFor="let d of destinations">
+  <div class="destination-item" *ngFor="let d of destinations" (click)='selectedDestination(d)'>
     <div class="destination">
       <div class="destination-img"></div>
       <p class="destination-location">{{d.location}}</p>

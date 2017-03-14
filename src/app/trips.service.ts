@@ -15,7 +15,6 @@ export class TripsService {
   }
 
   getTrip(id: number){
-  //  this.http.get()
    return this.http.get('/api/trip/'+id).map(res => res.json()); 
   }
 

@@ -1,4 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DestinationsService } from '../destinations.service';
 import { Destination } from '../destination';
 
@@ -9,7 +10,7 @@ import { Destination } from '../destination';
 })
 export class DestinationsComponent implements OnInit {
 
-  constructor(private destinationService: DestinationsService) { }
+  constructor(private destinationService: DestinationsService, private router: Router) { }
   destinations: Destination[] = [];
   @Input()
   destination: Destination = new Destination();
@@ -23,6 +24,10 @@ export class DestinationsComponent implements OnInit {
 
   createDestination() {
     this.destinationService.createDestination(this.destination);
+  }
+
+  selectedDestination(dest: Destination) {
+    this.router.navigate(['/destination', dest.id]);
   }
 
 

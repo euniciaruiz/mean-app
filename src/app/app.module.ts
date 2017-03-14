@@ -12,6 +12,7 @@ import { TripsComponent } from './trips/trips.component';
 import { DestinationsService } from './destinations.service';
 import { TripsService } from './trips.service';
 import { TripDetailComponent } from './trip-detail/trip-detail.component';
+import { DestinationDetailComponent } from './destination-detail/destination-detail.component';
 
 const ROUTES = [
   {
@@ -29,6 +30,10 @@ const ROUTES = [
   {
     path: 'trip/:id',
     component: TripDetailComponent
+  },
+  {
+    path: 'destination/:id',
+    component: DestinationDetailComponent
   }
 ];
 
@@ -38,6 +43,7 @@ const ROUTES = [
     DestinationsComponent,
     TripsComponent,
     TripDetailComponent,
+    DestinationDetailComponent,
 
   ],
   imports: [

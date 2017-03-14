@@ -41,9 +41,10 @@ export class TripDetailComponent implements OnInit {
     this.router.navigate(['/trips']);
   }
 
-  updateTrip(trip: Trip, details: Destination): void {
+  updateTrip(trip: Trip, details: number): void {
     this.trip = trip;
-    this.destinationService.getDestination(details.location).subscribe(destination => {
+
+    this.destinationService.getDestination(details).subscribe(destination => {
       this.trip.location = destination;
       this.tripService.updateTrip(this.trip);
     });
