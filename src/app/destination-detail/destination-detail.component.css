@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400i");
+.center-block-elem {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
+.center-inline-elem {
+  display: -webkit-inline-flex !important;
+  display: inline-flex !important;
+  -webkit-align-items: center !important;
+  align-items: center !important;
+  -webkit-justify-content: center !important;
+  justify-content: center !important; }
+
+.vertical-center-table {
+  display: table-cell;
+  vertical-align: middle; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin-top: 150px;
+  padding: 0; }
+  .container #image {
+    width: 49%;
+    height: 100vh;
+    display: inline-block;
+    text-align: center; }
+    .container #image img {
+      width: 60%;
+      height: 50%;
+      object-fit: cover; }
+  .container #details {
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 100vh;
+    vertical-align: top; }
+    .container #details .group {
+      width: 100%;
+      height: 100px; }
+      .container #details .group label {
+        width: 20%; }
+      .container #details .group input {
+        width: 50%;
+        height: 40px;
+        padding: 3px;
+        border: 1px solid transparent;
+        background-color: #eee;
+        border-radius: 3px; }
+        .container #details .group input:focus {
+          outline: none; }
+      .container #details .group select {
+        width: 50%;
+        height: 40px;
+        border: 1px transparent;
+        background-color: #eee; }
+        .container #details .group select:focus {
+          outline: none; }
+  .container .update-btn {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    background-color: #95DEE3;
+    line-height: 50px;
+    border-radius: 3px;
+    position: absolute;
+    right: 10%; }
+  .container .back-btn {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 3px;
+    background-color: #B93A32;
+    color: #ddd; }
+
+/*# sourceMappingURL=destination-detail.component.css.map */

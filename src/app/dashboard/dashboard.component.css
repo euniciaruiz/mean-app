@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400i");
+
+
 .center-block-elem, .container {
   display: -webkit-flex;
   display: flex;
@@ -6,14 +8,6 @@
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center; }
-
-.center-inline-elem {
-  display: -webkit-inline-flex !important;
-  display: inline-flex !important;
-  -webkit-align-items: center !important;
-  align-items: center !important;
-  -webkit-justify-content: center !important;
-  justify-content: center !important; }
 
 .vertical-center-table {
   display: table-cell;
@@ -41,7 +35,8 @@
     height: 20px;
     font-family: "Playfair Display", serif;
     font-size: 18px;
-    opacity: 0.8; }
+    opacity: 0.8;
+    letter-spacing: 1px; }
   .container #title {
     z-index: 1;
     width: 100%;
@@ -57,5 +52,3 @@
     top: 0;
     right: 0;
     z-index: 1; }
-
-/*# sourceMappingURL=app.component.css.map */

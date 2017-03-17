@@ -1,9 +1,17 @@
 <div class="container">
-  <div class="destination-item" *ngFor="let d of destinations" (click)='selectedDestination(d)'>
-    <div class="destination">
-      <div class="destination-img"></div>
-      <p class="destination-location">{{d.location}}</p>
+  <div id="header-text"><span>Find the Perfect Destination</span></div>
+  <div class="destination-container">
+    <div class="destination-item" *ngFor="let d of destinations" (click)='selectedDestination(d)'>
+      <div class="destination">
+        <div class="destination-img"></div>
+        <div class="destination-details">
+          <div class="loc">{{d.location}}</div>
+          <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim beatae ab iure pariatur quo autem iste numquam, ducimus accusamus ipsa architecto incidunt quisquam? Libero voluptates repudiandae similique, sit, quae commodi.</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<app-navigation></app-navigation>
 

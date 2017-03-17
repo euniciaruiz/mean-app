@@ -13,12 +13,18 @@ import { DestinationsService } from './destinations.service';
 import { TripsService } from './trips.service';
 import { TripDetailComponent } from './trip-detail/trip-detail.component';
 import { DestinationDetailComponent } from './destination-detail/destination-detail.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const ROUTES = [
   {
     path: '',
-    redirectTo: 'destinations',
+    redirectTo: '/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: DashboardComponent
   },
   {
     path: 'destinations',
@@ -44,6 +50,8 @@ const ROUTES = [
     TripsComponent,
     TripDetailComponent,
     DestinationDetailComponent,
+    NavigationComponent,
+    DashboardComponent,
 
   ],
   imports: [

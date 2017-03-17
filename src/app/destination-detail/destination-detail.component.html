@@ -1,8 +1,19 @@
 <div class="container">
-  <input type="text" value="{{destination.location}}" [(ngModel)]="destination.location">
-  <select [(ngModel)]="destination.type">
-    <option *ngFor="let t of types" [value]="t">{{t}}</option>
-  </select>
-  <div class="update-btn" (click)="updateDestination()">Update</div>
-  <div class="back-btn" (click)="goBack()">Go Back</div>
+  <div id="image"><img src="http://lifestyle.inquirer.net/files/2016/06/t0620sembrano-sagada-6.jpg" alt=""></div>
+  <div id="details">
+    <div class="group">
+      <label>Location</label>
+      <input type="text" value="{{destination.location}}" [(ngModel)]="destination.location">    
+    </div>
+    <div class="group">
+      <label>Destination Type</label>
+      <select [(ngModel)]="destination.type">
+        <option *ngFor="let t of types" [value]="t">{{t}}</option>
+      </select>
+    </div>
+    <div class="update-btn" (click)="updateDestination()">Update</div>
+    <div class="back-btn" (click)="goBack()">Go Back</div>
+  </div>
 </div>
+
+<app-navigation></app-navigation>

@@ -9,6 +9,7 @@ export class DestinationsService {
   constructor(private http: Http) { }
 
   headers = new Headers();
+  
   getAllDestinations() {
     return this.http.get('/api/destinations').map(res => res.json());
   }
@@ -33,6 +34,4 @@ export class DestinationsService {
       .map(res => res.json())
       .subscribe(data => console.log(data));    
   }
-
-
 }

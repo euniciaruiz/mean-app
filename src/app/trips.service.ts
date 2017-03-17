@@ -26,5 +26,4 @@ export class TripsService {
       .map(res => res.json())
       .subscribe( data => console.log(data));
   }
-
 }

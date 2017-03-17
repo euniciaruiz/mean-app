@@ -1,0 +1,8 @@
+
+<div class="navigation-container">
+  <ul>
+    <li *ngFor="let place of places" (click)="goTo(place)">
+      <span>{{place}}</span>
+    </li>
+  </ul>
+</div>
