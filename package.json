@@ -4,6 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
+    "dev": "nodemon server.js",
     "build": "ng build && node server.js",
     "ng": "ng",
     "start": "ng serve",

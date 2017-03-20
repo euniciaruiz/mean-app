@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400i");
+.center-block-elem, #trip-container .trip .trip-loc {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
+.center-inline-elem {
+  display: -webkit-inline-flex !important;
+  display: inline-flex !important;
+  -webkit-align-items: center !important;
+  align-items: center !important;
+  -webkit-justify-content: center !important;
+  justify-content: center !important; }
+
+.vertical-center-table {
+  display: table-cell;
+  vertical-align: middle; }
+
+#trip-container {
+  width: 100%;
+  height: 100vh;
+  margin-top: 100px;
+  padding: 100px;
+  font-family: "Lato", sans-serif; }
+  #trip-container .trip {
+    position: relative;
+    margin: 10px;
+    width: 20%;
+    max-width: 300px;
+    max-height: 500px;
+    min-width: 200px;
+    min-height: 400px;
+    height: 40%;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-box-shadow: 6px 6px 8px -4px #777777;
+    -moz-box-shadow: 6px 6px 8px -4px #777777;
+    box-shadow: 6px 6px 8px -4px #777777; }
+    #trip-container .trip img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.6;
+      border-radius: 4px; }
+    #trip-container .trip .trip-amount {
+      position: absolute;
+      top: 10px;
+      right: -10px;
+      width: 100px;
+      height: 50px;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding-right: 10px;
+      padding-left: 10px;
+      line-height: 50px;
+      -webkit-box-shadow: 6px 6px 8px -4px #777777;
+      -moz-box-shadow: 6px 6px 8px -4px #777777;
+      box-shadow: 6px 6px 8px -4px #777777; }
+    #trip-container .trip .trip-loc {
+      width: 100%;
+      height: 100%; }
+      #trip-container .trip .trip-loc span {
+        color: #333;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 10px; }
+
+/*# sourceMappingURL=trips.component.css.map */

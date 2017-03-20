@@ -1,8 +1,17 @@
 
-<ul>
+<!--<ul>
   <li *ngFor="let t of trips" (click)="onSelectTrip(t)">
     <span>{{t.location}}</span>
     <span>{{t.amount | currency: "Php": 2}}</span>
   </li>
 </ul>
+-->
+
+<div id="trip-container">
+  <div class="trip" *ngFor="let t of trips" (click)="onSelectTrip(t)">
+    <img src="http://www.statravel.co.za/static/za_division_web_live/assets/470x400-Japan.jpg" alt="">
+    <div class="trip-loc"><span>{{t.location}}</span></div>
+    <div class="trip-amount"><span>{{t.amount | currency:"USD":true}}</span></div>
+  </div>
+</div>
 <app-navigation></app-navigation>

@@ -11,9 +11,19 @@
         <option *ngFor="let t of types" [value]="t">{{t}}</option>
       </select>
     </div>
-    <div class="update-btn" (click)="updateDestination()">Update</div>
-    <div class="back-btn" (click)="goBack()">Go Back</div>
+    <div class="group">
+      <label>Description</label>
+      <div class="description-text" contenteditable="true">
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, expedita nesciunt molestias cum, itaque ipsum modi esse sapiente qui vitae aliquam nam assumenda nobis.</span>    
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="update-btn" (click)="updateDestination()">Update</div>
+      <div class="back-btn" (click)="goBack()">Go Back</div>
+    </div>
   </div>
+  
 </div>
 
 <app-navigation></app-navigation>
